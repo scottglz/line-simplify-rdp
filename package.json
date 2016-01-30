@@ -1,0 +1,30 @@
+{
+  "name": "line-simplify-rdp",
+  "version": "0.1.0",
+  "description": "Simplify lines using the Ramer–Douglas–Peucker algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "lint": "jshint index.js",
+    "validate": "npm ls",
+    "preflight": "npm run lint && npm run validate && npm run test"
+  },
+  "keywords": [
+    "line",
+    "poligon",
+    "simplify",
+    "simplification",
+    "Ramer",
+    "Douglas",
+    "Peucker"
+  ],
+  "author": "Scott Glazer",
+  "license": "MIT",
+  "dependencies": {
+    "distance-to-line-segment": "^0.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "tape": "^4.4.0"
+  }
+}
