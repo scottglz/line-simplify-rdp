@@ -22,7 +22,7 @@
   "author": "Scott Glazer",
   "license": "MIT",
   "dependencies": {
-    "distance-to-line-segment": "^0.1.0"
+    "distance-to-line-segment": "^0.2.0"
   },
   "devDependencies": {
     "jshint": "^2.9.1",
