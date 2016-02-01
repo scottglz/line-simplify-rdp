@@ -5,10 +5,10 @@
   "repository": "https://github.com/scottglz/line-simplify-rdp",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
+    "test": "tape test.js",
     "lint": "jshint index.js",
     "validate": "npm ls",
-    "preflight": "npm run lint && npm run validate && npm run test"
+    "prepublish": "npm run lint && npm run validate && npm run test"
   },
   "keywords": [
     "line",

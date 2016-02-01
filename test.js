@@ -12,7 +12,7 @@ test("stairstep", function(t) {
             y: Math.floor((i+2)/2)
         });
         var simplified = simplify(stairstep, 1);
-        t.deepEquals(simplified, [stairstep[0],stairstep[i]], (i+1) + " points")
+        t.deepEquals(simplified, [stairstep[0],stairstep[i]], (i+1) + " points");
     }
     
     for (var i=3; i < 1000; i++) {
@@ -21,7 +21,7 @@ test("stairstep", function(t) {
             y: Math.floor((i+2)/2)
         });
     }
-     t.deepEquals(simplify(stairstep, 1 ), [stairstep[0],stairstep[999]], "1000 points")
+     t.deepEquals(simplify(stairstep, 1 ), [stairstep[0],stairstep[999]], "1000 points");
 });
 
 test("unsimplifiable", function(t) {

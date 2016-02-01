@@ -16,22 +16,22 @@ function simplifyInternal(points, idx1, idx2, threshold, keepers) {
        dy = point2.y - y1,
        lineLengthSquared = dx*dx + dy*dy;
    
-   var minDist = Number.POSITIVE_INFINITY,
-       minDistIdx = -1;
+   var maxDist = Number.NEGATIVE_INFINITY,
+       maxDistIdx = -1;
    for (var i=idx1+1; i < idx2; i++) {
       var pointBetween = points[i];
       var dist = distanceToLineSegment2(x1, y1, dx, dy, lineLengthSquared, pointBetween.x, pointBetween.y);
-      if (dist < minDist) {
-         minDist = dist;
-         minDistIdx = i;
+      if (dist > maxDist) {
+         maxDist = dist;
+         maxDistIdx = i;
       }
    }
    
-   if (minDist <= threshold) 
+   if (maxDist <= threshold) 
       return; 
    
-   simplifyInternal(points, idx1, minDistIdx, threshold, keepers);
-   simplifyInternal(points, minDistIdx, idx2, threshold, keepers);
+   simplifyInternal(points, idx1, maxDistIdx, threshold, keepers);
+   simplifyInternal(points, maxDistIdx, idx2, threshold, keepers);
    
    
 }
