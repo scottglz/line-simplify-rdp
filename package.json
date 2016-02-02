@@ -1,6 +1,6 @@
 {
   "name": "line-simplify-rdp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simplify lines using the Ramer–Douglas–Peucker algorithm",
   "repository": "https://github.com/scottglz/line-simplify-rdp",
   "main": "index.js",
