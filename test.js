@@ -35,3 +35,18 @@ test("unsimplifiable", function(t) {
     
     t.deepEquals(simplify(points, 1), points);
 });
+
+function expandPts(pts) {
+   var ret = [];
+   for (var i=0; i < pts.length; i += 2) {
+      ret.push({x: pts[i], y: pts[i+1]}); 
+   }
+   return ret;
+}
+
+test("redundant square", function(t) {
+    t.plan(1);
+    var points = expandPts([0,0, 0,1, 0,2, 0,3, 1,3, 2,3, 3,3, 3,2, 3,1, 3,0, 2,0, 1,0, 0,0]);
+    t.deepEquals(simplify(points, 0), expandPts([0,0, 0,3, 3,3, 3,0, 0,0]));
+
+});
