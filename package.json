@@ -8,6 +8,7 @@
     "test": "tape test.js",
     "lint": "jshint index.js",
     "validate": "npm ls",
+    "makedocs": "jsdoc2md index.js | cat readme_src/head.md - readme_src/tail.md > README.md",
     "prepublish": "npm run lint && npm run validate && npm run test"
   },
   "keywords": [
@@ -25,6 +26,7 @@
     "distance-to-line-segment": "^0.2.0"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^1.3.3",
     "jshint": "^2.9.1",
     "tape": "^4.4.0"
   }
